@@ -5,6 +5,7 @@ Django==5.0.6
 django-crispy-forms==2.2
 django-environ==0.11.2
 environ==1.0
+gunicorn==22.0.0
 iniconfig==2.0.0
 packaging==24.1
 pip-system-certs==4.0
@@ -13,5 +14,5 @@ pytest==8.2.2
 pytest-django==4.8.0
 python-decouple==3.8
 sqlparse==0.5.0
+whitenoise==4.1.4
 wrapt==1.16.0
-gunicorn==22.0.0
