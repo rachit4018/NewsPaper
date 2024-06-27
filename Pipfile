@@ -11,6 +11,7 @@ certifi = "*"
 python-decouple = "*"
 environ = "*"
 whitenoise = "==4.1.4"
+gunicorn = "*"
 
 [dev-packages]
 
