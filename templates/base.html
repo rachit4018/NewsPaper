@@ -8,13 +8,12 @@
         </title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'home' %}">NewsPaper</a>
-
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a href="{% url 'article_create' %}">+ New</a></li>
-                    </ul>
+                <a class="navbar-brand" href="#">Articles</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     {% if user.is_authenticated %}
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Use ms-auto for right alignment -->
@@ -32,24 +31,22 @@
                                     </form>
                                 </li>
                             </ul>
-                            
                         </li>
                     </ul>
                     {% else %}
-                    <form class="form-inline ms-auto"> <!-- Use ms-auto for right alignment -->
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="btn btn-outline-secondary" aria-current="page" href="{% url 'login' %}">Login</a>
-                            </li>
-                            <li>
-                                <a class="btn btn-primary ms-2" aria-current="page" href="{% url 'signup' %}">Sign Up</a> <!-- Added ms-2 for margin -->
-                            </li>
-                        </ul>
-                    </form>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Use ms-auto for right alignment -->
+                        <li class="nav-item">
+                            <a class="btn btn-outline-secondary" aria-current="page" href="{% url 'login' %}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary ms-2" aria-current="page" href="{% url 'signup' %}">Sign Up</a> <!-- Added ms-2 for margin -->
+                        </li>
+                    </ul>
                     {% endif %}
                 </div>
             </div>
         </nav>
+        
          
            <div class="container">
             {% block content %}
