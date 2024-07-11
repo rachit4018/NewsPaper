@@ -13,6 +13,7 @@ environ = "*"
 whitenoise = "==4.1.4"
 gunicorn = "*"
 django-environ = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
