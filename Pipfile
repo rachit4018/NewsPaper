@@ -15,6 +15,7 @@ gunicorn = "*"
 django-environ = "*"
 psycopg2-binary = "*"
 sendgrid = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
